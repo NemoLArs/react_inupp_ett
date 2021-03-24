@@ -1,10 +1,29 @@
 .btnRed {
 
-background-color: red;
+    background-color: red;
 
 }
-.btnBlue {
+.btnGreen {
 
-    background-color: blue ;
+    background-color: green;
+
+}
+
+.question {
+
+    background-color: #2573b7;
+}
+
+.answer {
+
+
+    background-color: #1d538b;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #2573b7;
 
 }

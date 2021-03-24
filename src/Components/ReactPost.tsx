@@ -28,13 +28,19 @@ export const ReactPost:React.FC<iProps>= ({
       return(
 
           <>
-          <h1>
-              Q: {iPost.iQuestion}
-          <br/>
-              A: {iPost.iAnswer}
-          </h1>
+              <div className={"container"}>
+                    <h1 className={"question"}>
+                         Q: {iPost.iQuestion}
+                    </h1>
+                    <h2 className={"answer"}>
+                        A: {iPost.iAnswer}
+                    </h2>
+
               {  iPost.iLiked ? <PostLike /> : null }
-              <button className={"btnBlue"} onClick={() => iLikedPost(iPost)}>LIKE</button>
+              <button className={iPost.iLiked ? "btnRed" : "btnGreen"}
+                 onClick={() => iLikedPost(iPost)}>
+                 {!iPost.iLiked ? "LIKE" : "UNLIKE"}</button>
+              </div>
           </>
       )
 
